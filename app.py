@@ -3,7 +3,7 @@ from transformers import pipeline
 
 app = Flask(__name__)
 
-simplifier = pipeline("text2text-generation", model="t5-base")
+simplifier = pipeline("text2text-generation", model="facebook/bart-large-cnn")
 
 @app.route("/", methods=["GET", "POST"])
 def index():
